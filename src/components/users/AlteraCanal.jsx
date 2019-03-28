@@ -209,7 +209,7 @@ renderForm(){
                     </div>
                 </div>
             </div>
-            <label className="col-14 d-flex justify-content-end">* <span className="text-danger"> Campos obrigatórios</span></label>
+            <label className="col-14 d-flex justify-content-end">*Campos obrigatórios</label>
             <hr/>
             <div className="row">
                 <div className="col-12 d-flex justify-content-end">
