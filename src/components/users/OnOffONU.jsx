@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Main from '../templates/Main'
 import api from '../users/api'
-import axios from 'axios'
+//import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const headerProps = {
@@ -18,10 +18,17 @@ const initialState = {
 }
 */
 
-const baseUrl = 'http://localhost:3001/onu'
+//const baseUrl = 'http://localhost:3001/onu'
 const initialState = {
     user: { id: '', cpf: '', mac: '', tipoonu: ''},
-    list: [],
+    list: [
+        { "id": 1, "cpf": 34576523478, "mac": "FHTT10841e60", "tipoonu": "xima" },
+        { "id": 2, "cpf": 72537749045, "mac": "FHTT10841e70", "tipoonu": "fiberhome" },
+        { "id": 3, "cpf": 15263533280, "mac": "FHTT10841e80", "tipoonu": "tplink" },
+        { "id": 4, "cpf": 98254562776, "mac": "FHTT10841e90", "tipoonu": "ximacompleta" },
+        { "id": 5, "cpf": 25637109409, "mac": "FHTT10841e67", "tipoonu": "tplink" },
+        { "id": 6, "cpf": 15275509837, "mac": "FHTT10841e68", "tipoonu": "fiberhome" }        
+    ],
     novoCanal: ''
 }
 
@@ -30,9 +37,10 @@ export default class OnOffONU extends Component {
     state = {...initialState}
 
     componentWillMount() {
-        axios(baseUrl).then(resp => {
+        /*axios(baseUrl).then(resp => {
             this.setState({ list: resp.data })
         })
+        */
     }
 
     onuONOFF(user,situacao){
@@ -64,7 +72,7 @@ export default class OnOffONU extends Component {
     }
 
     save() {
-        const user = this.state.user
+        /*const user = this.state.user
         const method = user.id ? 'put' : 'post' //se number(id) for verdadeiro(alteração) então put, caso contrario insira com post.
         const url = user.id ? `${baseUrl}/${user.id}` : baseUrl
         axios[method]( url, user )
@@ -72,6 +80,7 @@ export default class OnOffONU extends Component {
                 const list = this.getUpdatedList(resp.data)
                 this.setState({ user: initialState.user, list })
             })
+        */
     }
 
     load(user) {
@@ -79,11 +88,12 @@ export default class OnOffONU extends Component {
     }
 
     remove(user){
-        axios.delete(`${baseUrl}/${user.id}`).then(resp => {
+        /*axios.delete(`${baseUrl}/${user.id}`).then(resp => {
             const list = this.getUpdatedList(user, false)
             //const list = this.state.list.filter(u => u !== user)
             this.setState({ list })
         })
+        */
     }
 
     getUpdatedList(user, add=true){

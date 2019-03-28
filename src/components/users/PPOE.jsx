@@ -21,7 +21,14 @@ const initialState = {
 const baseUrl = 'http://localhost:3002/user'
 const initialState = {
     user: { id: '', datahora: '', comando: '', envio: '', resultado: ''},
-    list: [],
+    list: [
+        { id: '1', datahora: '23/01 10:00:23', comando: 'Alterar SSID', envio: "Sucesso", resultado: "Sucesso", usuario: "João" },
+        { id: '2', datahora: '23/01 10:02:34', comando: 'Alterar senha PPOE', envio: "Falhou", resultado: "Falhou", usuario: "Lucas" },
+        { id: '3', datahora: '23/01 10:02:53', comando: 'Alterar VLAN', envio: 'Sucesso', resultado: "Em andamento", usuario: "Fernanda" },
+        { id: '4', datahora: '23/01 10:03:21', comando: 'Alterar senha wifi', envio: 'Sucesso', resultado: "Sucesso", usuario: "Leticia" },
+        { id: '5', datahora: '23/01 10:04:33', comando: 'Alterar Canal', envio: "Falhou", resultado: "Falhou", usuario: "Carlos" },
+        { id: '6', datahora: '23/01 10:04:58', comando: 'Alterar usuário PPOE', envio: "Em andamento", resultado: "Sucesso", usuario: "Jessica"}
+    ],
     usuarioPPOE: '',
     senhaPPOE: '',
     selecao: 'Selecionar todos',

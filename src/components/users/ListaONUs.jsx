@@ -17,7 +17,14 @@ const baseUrl = '192.168.8.87:8080/TesteWebservice/anm/192.168.8.87/onu'
 const baseUrl = 'http://localhost:3001/onu'
 const initialState = {
     user: { id: '', cpf: '', mac: '', tipoonu: ''},
-    list: [],
+    list: [
+        { "id": 1, "cpf": 34576523478, "mac": "FHTT10841e60", "tipoonu": "xima" },
+        { "id": 2, "cpf": 72537749045, "mac": "FHTT10841e70", "tipoonu": "fiberhome" },
+        { "id": 3, "cpf": 15263533280, "mac": "FHTT10841e80", "tipoonu": "tplink" },
+        { "id": 4, "cpf": 98254562776, "mac": "FHTT10841e90", "tipoonu": "ximacompleta" },
+        { "id": 5, "cpf": 25637109409, "mac": "FHTT10841e67", "tipoonu": "tplink" },
+        { "id": 6, "cpf": 15275509837, "mac": "FHTT10841e68", "tipoonu": "fiberhome" }
+    ],
 }
 
 export default class ListaONUs extends Component {
