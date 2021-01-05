@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "http://tuliomscarvalho.github.io/aprovisionamento",
   "dependencies": {
-    "axios": "0.18.0",
+    "axios": "0.21.1",
     "bootstrap": "^4.1.1",
     "font-awesome": "4.7.0",
     "global": "^4.3.2",
